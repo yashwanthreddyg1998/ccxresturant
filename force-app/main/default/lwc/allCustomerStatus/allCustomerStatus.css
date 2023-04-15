@@ -1,0 +1,7 @@
+table  th{
+    background: rgb(255,70,35);
+    color: whitesmoke;
+    }
+    .Occupied{
+        color:green;
+    }

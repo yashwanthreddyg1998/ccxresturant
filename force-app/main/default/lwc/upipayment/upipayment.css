@@ -1,0 +1,15 @@
+:host{
+    --slds-c-button-shadow-focus:0 0 3px #8f5a0c;
+    --slds-c-button-brand-color-background: rgb(255, 70, 35);
+    --slds-c-button-brand-color-border:White;
+    --slds-c-button-brand-text-color:rgb(255, 255, 255);
+    --slds-c-button-radius-border:90px;
+        
+}
+.slds-button_success
+{
+    width:150px;
+    background-color:rgb(255, 70, 35);
+    height:40px;
+    color:rgb(255, 255, 255);
+}

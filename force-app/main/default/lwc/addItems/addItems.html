@@ -1,0 +1,88 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>
+            &nbsp;Bulk Item Creation
+        </h3>
+        <template for:each={itemList} for:item="item" for:index="index">
+            <lightning-record-edit-form key={item.id} object-api-name="CCXR_Items__c">
+                <lightning-messages> </lightning-messages>
+                <lightning-layout multiple-rows>
+                    <!--Item Name-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Name</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Item_Name__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Item Category-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Category</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Item_Category__c" variant="label-hidden" required>
+                        </lightning-input-field>                   
+                    </lightning-layout-item>
+                    <!--Item Sub Category-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Sub Category</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Item_SubCategory__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Item Price-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Price</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Price__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Serves-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Serves</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Serves__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Prep Time-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Preparation Time</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Item_Prep_Time__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Status-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Status</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Item_Status__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Image Link-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Image Link</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="Item_Image_Link__c" variant="label-hidden" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Special Item-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="subcat"><b>Special Item?</b></label>
+                        <lightning-input-field fieldid="subcat" field-name="CCXR_Special_Item__c" variant="label-hidden" >
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Buttons:  ADD, DELETE-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon>&nbsp;&nbsp;&nbsp;
+                            <lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+                                alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+                            </lightning-icon>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+            </lightning-record-edit-form>
+        </template>
+        <!--Submit/Save Records-->
+        <lightning-layout>
+            <div class="slds-align_absolute-center">
+                <lightning-button variant="success" onclick={handleSubmit} name="submit" label="Submit">
+                </lightning-button>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>

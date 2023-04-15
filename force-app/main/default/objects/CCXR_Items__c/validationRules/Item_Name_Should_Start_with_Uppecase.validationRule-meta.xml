@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Name_Should_Start_with_Uppecase</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(CCXR_Item_Name__c )),
+    NOT(REGEX(CCXR_Item_Name__c , &quot;[A-Z][a-z]*|[A-Z][a-z]*&quot;)),
+    NOT(CONTAINS(CCXR_Item_Name__c , &quot;__&quot;)),
+    NOT(CONTAINS(CCXR_Item_Name__c , &quot; &quot;))
+)</errorConditionFormula>
+    <errorDisplayField>CCXR_Item_Name__c</errorDisplayField>
+    <errorMessage>Item Name Start With Uppercase Letter</errorMessage>
+</ValidationRule>

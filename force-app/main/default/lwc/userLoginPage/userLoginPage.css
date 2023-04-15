@@ -1,0 +1,15 @@
+:host{
+  --slds-c-button-brand-color-background:rgb(255, 38, 0);
+  --slds-c-button-brand-color-background-hover:rgb(236, 64, 22);
+  --slds-c-button-brand-color-border:White;
+  --slds-c-button-brand-text-color:White;
+}
+.card{
+    background-color: #e7e7e7;
+}
+.borderclass{
+    padding: 1rem; /* Add padding */
+  background-color: #ffffff; /* Set the background color */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+}

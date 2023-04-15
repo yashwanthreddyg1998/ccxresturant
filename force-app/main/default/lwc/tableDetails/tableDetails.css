@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+}
+/* Top right text */
+.text-block {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.Vacant{
+  color:green;
+}
+.Occupied
+{
+  color:orange;
+}
+.Reserved
+{
+  color:red;
+}

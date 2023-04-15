@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>CCX Project Management</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>CCX_Team_Member__c</tabs>
+    <tabs>CCX_Team__c</tabs>
+    <tabs>CCX_Role__c</tabs>
+    <tabs>CCX_Employee__c</tabs>
+    <tabs>CCX_Project_Manager__c</tabs>
+    <tabs>CCX_Project__c</tabs>
+    <tabs>CCX_On_Project__c</tabs>
+    <tabs>CCX_Client_Partner__c</tabs>
+    <tabs>CCX_Assigned__c</tabs>
+    <tabs>CCX_Activity__c</tabs>
+    <tabs>CCX_Task__c</tabs>
+    <tabs>CCX_Preceding_Task__c</tabs>
+    <tabs>CCX_Preceding_Activity__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>CCX_Project_Management_UtilityBar</utilityBar>
+</CustomApplication>

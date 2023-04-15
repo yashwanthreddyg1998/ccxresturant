@@ -1,0 +1,93 @@
+<template>    
+<lightning-card>
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="customer id">Customer id</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Customer Name">Customer Name</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Customer Status ">Customer Status </div>
+                </th>
+               
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Table Id">Table Id</div>
+                </th>               
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="No Of Persons">No Of Persons</div>
+                </th>
+                 <th class="" scope="col">
+                  <div class="slds-truncate" title="Wait Time ">Wait Time </div>
+                </th>
+
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Assigned to">Assigned to</div>
+                </th>
+
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Reserved">Reserve</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <template for:each={records} for:item ='record'>
+              <tr class="" key = {record.Id}>
+                      <td data-label="name">
+                          <div class="slds-cell-wrap"><b>{record.Name}</b></div>
+                      </td>
+                      <td data-label="cusname">
+                          <div class="slds-cell-wrap"><b>{record.CCXR_Customer__r.CCXR_Name__c}</b></div>
+                      </td>
+                      <td data-label="tablestatus" >
+                        <div class="slds-cell-wrap"><div class={record.Customer_Table_Status__c}><b>{record.Customer_Table_Status__c}</b></div></div>
+                      </td>
+                  
+                      <td data-label="comosdj">   
+                        <lightning-combobox
+                        options={accountOptions}
+                        onchange={handleSelection}
+                        onmouseover={handleMouseOver}                        
+                        value={record.CCXR_Table__c}
+                        disabled={record.Button_1__c}
+                        >
+                      </lightning-combobox>
+                    </td >
+
+                      <td data-label="person" style="text-align:center">
+                        <div class="slds-cell-wrap"><b>{record.CCXR_Customer__r.No_Of_Persons__c}</b></div>
+                      </td>
+                    
+                      
+                      
+                      <td data-label="tablestatus" >
+                          <!--<div class="slds-cell-wrap"><div style="color: red;">{record.waittime__c}</div></div>                      
+                          -->  <c-lead-status-colour leadstatus={record.waittime__c} leadstatus1={record.Timeofvisit__c}></c-lead-status-colour></td>
+                   
+                      <td data-label="Accept">
+                        <b><lightning-button
+                            label="Assign"
+                            variant="success"
+                            onclick={handleButtonClick}
+                            value={record.Id}
+                        ></lightning-button></b>
+                    </td>
+                    <td data-label="Accept">
+                      <b> <lightning-button
+                          label="Reserve"
+                          variant="brand"
+                          onclick={handleReserved}
+                          value={record.Id}
+                          disabled={record.Button_1__c}
+                      ></lightning-button></b>
+                  </td>
+
+                      
+                  </tr>
+              </template>
+          </tbody>
+      </table>
+  </lightning-card>
+</template>

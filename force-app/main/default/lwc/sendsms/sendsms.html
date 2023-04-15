@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="SMS Sender" icon-name="standard:action_list_component">
+        <div class="slds-grid slds-grid_vertical">
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-input type="text" name="mobileNumber" data-id="mobileNumber" label="Enter Mobile Number"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-input type="text" name="smsBody" data-id="smsBody" label="Enter SMS Message"></lightning-input>
+            </div>
+            <br/>
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-button variant="brand" label="Send SMS" title="Send SMS" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

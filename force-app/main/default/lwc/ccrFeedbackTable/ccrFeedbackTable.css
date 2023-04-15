@@ -1,0 +1,24 @@
+table  th{
+  background: rgb(255,38,0);
+  color: whitesmoke;
+  }
+  .css-serial {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+   }
+   .css-serial td:first-child:before {
+    counter-increment: serial-number; /* Increment the serial number counter */
+    content: counter(serial-number); /* Display the counter */
+   }
+  h1{
+    color: rgb(255,38,0);
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+    font-family:"Times New Roman", Times, serif;
+   }
+   .strong-text{
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    -webkit-text-fill-color:rgb(255,38,0);
+   }

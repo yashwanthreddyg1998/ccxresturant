@@ -1,0 +1,28 @@
+.datatable-orange{
+    background: rgb(87, 226, 36);
+    
+  }
+  .datatable-orange:hover{
+    background: rgb(239, 50, 8);
+  }
+  .myTable table>thead .slds-cell-fixed.slds-has-button-menu, .myTable table>thead .slds-cell-fixed.slds-has-button-menu:hover{
+    background: rgb(255, 38, 0);
+  }
+  :host{
+    --slds-c-button-shadow-focus:0 0 3px #8f5a0c;
+    --slds-c-button-brand-color-background: rgb(3, 3, 3);
+    --slds-c-button-brand-color-border:White;
+    --slds-c-button-brand-text-color:rgb(255, 248, 248);
+    
+}
+.myTable.TH
+{
+  color: aqua;
+}
+
+.p1
+{
+    text-align: center;
+    font-weight:bold;
+
+}
