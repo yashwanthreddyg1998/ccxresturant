@@ -1,9 +1,0 @@
-.my-radio-group {
-    --sds-c-button-line-height: 2.875rem;
-}
-:host {
-    --sds-c-radio-mark-color-foreground: #000000;
-    --sds-c-radio-mark-border-unchecked: #000000;
-    --sds-c-radio-color-background-checked:  rgb(255, 70, 35);
-    --sds-c-radio-color-border-unchecked: rgb(255, 70, 35);
-}
