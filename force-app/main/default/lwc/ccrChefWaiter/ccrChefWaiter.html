@@ -1,0 +1,56 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item class="strong-text">
+            <label for="id" style="font-size: 14px; font-weight:bold;">Type Of Employee</label>
+            <lightning-combobox fieldid="id" variant="label-hidden"  options={options1} onchange={handleKeyChange} > 
+            </lightning-combobox>
+            </lightning-layout-item>
+    </lightning-layout>
+
+    
+    
+<!--Chef & Waiter-->
+
+    <lightning-card class="myClass">
+    
+        <div class="backgroundImg" >
+        <div class="slds-grid slds-wrap">
+            <template if:true={records}>
+            <template for:each={records} for:item="emp">
+                <div key={emp.Id} class="slds-col slds-size_1-of-2 slds-p-around_small">
+                   
+                    <lightning-card title={emp.CCXR_Name__c} icon-name="standard:people" onmouseover={handleMouseOver}>
+                         
+                            <lightning-button label="Delete " variant="brand" style="font-weight:bolder;font-size:14px;"
+                                                    onclick={handleDelete} value={emp.Id} slot="actions" class="slds-p-left_large"></lightning-button> &nbsp;&nbsp;&nbsp;
+                            <lightning-button label="Edit " variant="Success" style="font-weight:bolder;font-size:14px;"
+                                                    onclick={handleUpdate} value={emp.Id} slot="actions" class="slds-p-left_large"></lightning-button>
+                            
+                        
+                        <h3 class="slds-p-horizontal_medium" style="font-size:14px;">
+                            <b> Name : {emp.CCXR_Name__c}</b><br/> 
+                            <b> Type : {emp.CCXR_Type_of_Employee__c}</b><br/>
+                            <b>Phone : {emp.CCXR_Phone__c}</b><br/>
+                            <template for:each={emp.CCXR_Chef_Statuses__r} for:item="cont">
+                                <div key={cont.Id} class="slds-hint-parent">
+                                    <b> Status :{cont.CCXR_Chef_Current_Status__c} </b>
+                                </div>
+                            </template>
+                            <b>Email : {emp.CCXR_Email__c}</b><br/>
+                            <b> Adhar No : {emp.CCXR_Aadhar_Number__c}</b><br/>
+                        </h3>
+                        <h3 slot="footer" style="font-size:14px;">
+                            <b>Email : {emp.CCXR_Email__c}</b>
+                        </h3>
+                    </lightning-card>
+                </div>
+                
+            </template>
+            </template>
+         <template if:true={error}>
+            {error}
+        </template>
+        </div>
+        </div>
+    </lightning-card>
+</template>

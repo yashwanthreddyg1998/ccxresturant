@@ -1,0 +1,10 @@
+table  th{
+    background: rgb(255,70,35);
+    color: whitesmoke;
+    }
+    .Reserved{
+        color:red;
+    }
+    .Waiting{
+        color:orange;
+    }

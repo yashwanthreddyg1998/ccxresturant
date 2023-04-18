@@ -1,0 +1,25 @@
+:host{
+    --slds-c-button-shadow-focus:0 0 3px #8f5a0c;
+    --slds-c-button-brand-color-background: rgb(255, 70, 35);
+    --slds-c-button-brand-color-background-hover:rgb(218, 100, 3);
+    --slds-c-button-radius-border:90px;
+    --slds-c-button-brand-color-border:White;
+    --slds-c-button-brand-text-color:rgb(255, 255, 255);
+    
+}
+button 
+{
+    font-weight: bold;
+}
+table  th{
+    background: rgb(255,38,0);
+    color: whitesmoke;
+    font-size: medium;
+        
+}
+.Ready{
+    color:orangered;
+}
+.Picked-up{
+    color:green;
+}

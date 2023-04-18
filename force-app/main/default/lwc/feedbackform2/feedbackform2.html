@@ -1,0 +1,71 @@
+<template>
+    <div class="slds-box slds-theme_shade">
+        <lightning-card>
+            <c-ccxheadercmp></c-ccxheadercmp>
+        </lightning-card>
+    <lightning-card >
+        <div class="headtitle">
+            <lightning-formatted-text value="CCX Restaurant Customer Satifaction Survey" class="warning">
+
+            </lightning-formatted-text>
+        </div>
+        <div class="subtext" style="text-align:center"><p> <br/>
+            &ensp;&nbsp;
+            Our restaurant pays excellent care and consideration towards providing customers 
+            with best food and table service.
+            We would appreciate your time in providing feedback to our customer satisfaction
+            survey and to serve you better</p></div>
+       
+    <lightning-card>
+        <h1 slot="title"><b>Food Quality</b></h1>
+    <div class="radio-buttons" style="padding: 10px; font-size: 17px;" >
+        
+    <template for:each={options1} for:item="option">
+        &nbsp;
+        <label key={option.value}>
+            &nbsp;&nbsp;
+            <input type="radio"
+                    name="radiogp"
+                    value={option.value}
+                    onchange={handleChange1}
+                    class="p"/>
+            {option.label}
+           
+        </label>
+        
+        
+    </template>
+</div>
+    
+    </lightning-card>
+    
+    
+    <lightning-card>
+        <h1 slot="title"><b>Service Quality</b></h1> 
+    <div class="radio-buttons" style="padding: 10px; font-size: 17px;">
+    <template for:each={options2} for:item="option">
+        &nbsp;
+        
+        <label key={option.value}>
+            &nbsp;&nbsp;
+            <input type="radio"
+                    name="radio-group"
+                    value={option.value}
+                    onchange={handleChange2}
+                    class="p"/>
+            {option.label}
+        </label>
+    </template>
+    </div>
+    </lightning-card>
+    <div style="padding: 15px; font-size: 17px;"> 
+    <h1>Suggestions</h1>
+    
+    <lightning-textarea name="input3" placeholder="Any Suggestions...." style="width: 550px;font-family: 'Times New Roman', Times, serif" onchange={handlesuggestion}></lightning-textarea>
+    <lightning-input value={ordername} label="CCXR_Order" ></lightning-input>
+    <br>
+</div>
+    <lightning-button label="Submit feedback" disabled={disableButton} onclick={createfeedbackRec} variant="brand" class="slds-align_absolute-center"></lightning-button>
+    </lightning-card>
+    </div>
+    </template>

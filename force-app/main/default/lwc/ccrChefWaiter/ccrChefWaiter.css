@@ -1,0 +1,31 @@
+.backgroundImg{
+    background-color: rgb(255, 38, 0);
+ }
+.THIS .concern {
+    color: #ffffff;
+    background-color:#f0c63e; 
+}
+
+.THIS .concern:hover,
+.THIS .concern:active {
+    background-color:#f0b73e;
+}
+
+.THIS .concern:disabled {
+    background-color:#c9c7c5;
+    cursor: not-allowed;
+}
+.strong-text{
+    font-weight: bold;
+    padding-left: 10px;
+    width:170px;
+    -webkit-text-fill-color:rgb(255,38,0);
+   }
+:host{
+    --slds-c-button-shadow-focus:0 0 3px #8f5a0c;
+    --slds-c-button-brand-color-background:red;
+    --slds-c-button-brand-color-background-hover:rgba(230, 34, 34, 0.986);
+    --slds-c-button-radius-border:90px;
+    --slds-c-button-brand-color-border:White;
+    --slds-c-button-brand-text-color:white;    
+}

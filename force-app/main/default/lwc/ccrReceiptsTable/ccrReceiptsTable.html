@@ -1,0 +1,85 @@
+<template>
+    <lightning-card>
+      <h1>Receipts</h1>
+
+      <!--<div style="background-color:skyblue; text-align:center">
+        <a onclick={redirectToReport}>View Report</a>
+      </div>-->
+      <div class="strong-text"> 
+        <lightning-layout>
+            <lightning-layout-item> 
+             <!-- <legend class="slds-form-element__legend slds-form-element__label">Search By Date</legend>   -->
+             <label for="id" style="font-size:14px;font-weight:bold;">Search By Date</label> 
+             <lightning-input  type="Date"
+                                value={records}
+                                class="strong-text"
+                                label="Search By Date"
+                                onchange={handleKeyChange}
+                                variant="label-hidden"
+                                fieldid="id"
+                               >
+              </lightning-input>  
+             <!-- <lightning-input type="Date" label="Date" value={oldDate} name="oldDate" onchange={handleChangeAction}>
+              </lightning-input>
+              <lightning-button label="Search"
+                                onclick={handleSearchKeyword}
+                                 variant="brand">
+              </lightning-button>-->
+            </lightning-layout-item> 
+        </lightning-layout>
+      </div>
+      
+      <div class="css-serial">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-p-top_medium">
+            <thead class="my-class">
+                <tr class="slds-line-height_reset">
+                  <th>Sr. No</th>
+                  <th scope="col">
+                    <div class="slds-truncate" title="Receipt ID">Receipt ID</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate" title="Order Id">Order ID </div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate" title="Table Id">Table ID </div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate" title="Customer Name">Customer Name</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate" title="Amount">Amount</div>
+                  </th>
+                  <th  scope="col">
+                    <div class="slds-truncate" title="Transaction Date">Transaction Date</div>
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={records} for:item ='record'>
+                    <tr class="" key = {record.Id}>
+                      <td>&nbsp;</td>
+                        <td data-label="ReceiptName">
+                            <div class="slds-cell-wrap"><a href="javascript:void(0);">{record.Name}</a></div>
+                        </td>
+                        <td data-label="order">
+                            <div class="slds-cell-wrap"><a href="javascript:void(0);">{record.CCXR_Order__r.Name}</a></div>
+                        </td>
+                        <td data-label="table">
+                            <div class="slds-cell-wrap"><a href="javascript:void(0);">{record.CCXR_Order__r.CCXR_Table__c}</a></div>
+                        </td>
+                        <td data-label="cusname">
+                            <div class="slds-cell-wrap"><a href="javascript:void(0);">{record.CCXR_Order__r.CCXR_Customer__c}</a></div>
+                        </td>
+                        <td data-label="Amount">
+                            <div class="slds-cell-wrap">{record.Amount_Received__c}</div>
+                        </td>
+                        <td data-label="TransactionDate">
+                            <div class="slds-cell-wrap">{record.Transaction_Date__c}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+      </div>
+    </lightning-card>
+</template>

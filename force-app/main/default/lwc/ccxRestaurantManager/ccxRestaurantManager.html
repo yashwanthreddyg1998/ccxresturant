@@ -1,0 +1,77 @@
+<template>
+  <lightning-card>
+  <c-ccxheadercmp></c-ccxheadercmp>
+   <br/>
+          <lightning-tabset class="slds-tabs_default slds-tabs_large ">
+          
+              <!-- <lightning-tab label="Menu" icon-name={iconName1} >
+                    Menu Content !<br/>
+                    <lightning-button variant="brand" label="Display Items" onclick={showModalBox} class="slds-m-left_x-small"></lightning-button> 
+                    <c-display-items-screen if:true={showAddItem2Component}></c-display-items-screen>
+                        
+                     <c-ccr-rs2 if:true={displayItemComponent}></c-ccr-rs2>
+                      <c-display-items-screen ></c-display-items-screen>
+              </lightning-tab>-->
+
+      <!--Chef & waiter Content-->              
+              <lightning-tab label="Employee Management" icon-name={iconName2} class="slds-context-bar__label-action slds-truncate">
+                      <lightning-card >
+                        <div class="p1">
+                          <lightning-button variant="brand" label="Add Employee" onclick={showComp3}>
+                            
+                          </lightning-button>&nbsp;&nbsp;
+                          <lightning-button variant="brand" label="Display Employees" onclick={showComp4} >
+
+                          </lightning-button>
+                        </div>
+                         <!--<c-registration if:true={showAddEmpComponent}></c-registration> -->  
+                         <c-ccr-chef-waiter if:true={displayEmpComponent} ></c-ccr-chef-waiter>
+                         
+                         <template if:true={showAddEmpComponent}>    
+                          <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                             <div class="slds-modal__container">
+          
+                                <!-- popup body  -->
+                                <c-registration if:true={showAddEmpComponent}></c-registration>
+                                <!-- popup footer -->
+                                <footer class="slds-modal__footer">
+                                   <button class="slds-button slds-button_neutral" onclick={hideModalBox1}>Close</button>
+                                </footer>      
+                             </div>
+                          </section>
+                          <div class="slds-backdrop slds-backdrop_open"></div>
+                       </template>
+
+                      </lightning-card>
+              </lightning-tab>
+
+
+             
+      <!--Table Content-->           
+              <lightning-tab label="Tables Management" icon-name={iconName3}>
+                    <c-ccr-table-content></c-ccr-table-content>
+              </lightning-tab>
+      
+      <!--Add Items-->
+         
+              <lightning-tab label="Items Management" icon-name={iconName4}>
+                  <c-ccr-items-content></c-ccr-items-content>
+              </lightning-tab>
+          
+      <!--FeedBack Content-->
+         
+               <lightning-tab label="FeedBacks" icon-name={iconName5}>
+                  <c-ccr-feedback-Table ></c-ccr-feedback-Table>
+              </lightning-tab> 
+             
+              
+      <!--Receipts Content-->
+               <lightning-tab label="Receipts" icon-name={iconName6}>
+               <c-ccr-receipts-table ></c-ccr-receipts-table>
+               </lightning-tab>
+               
+          </lightning-tabset>
+  </lightning-card>
+
+ 
+</template>
