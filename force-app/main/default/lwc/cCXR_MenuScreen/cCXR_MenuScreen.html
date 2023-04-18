@@ -1,0 +1,31 @@
+<template>
+    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+    <div>
+        <c-ccxheadercmp></c-ccxheadercmp>
+    </div>
+    <br>
+    <u><h1 style="font-size: 30px;
+    text-align: center;">Menu</h1></u>
+    <div class="slds-form_horizontal slds-form slds-grid slds-wrap">
+    
+        <lightning-input  class="slds-size_1-of-3" style="font-weight: bolder;" type="text" label="Customer ID : " value={cname} readonly>
+        </lightning-input>
+        <lightning-input  class="slds-size_1-of-3" style="font-weight: bolder;" type="text" label="CSTN : " value={id} readonly>
+        </lightning-input>
+        <lightning-button class="slds-size_1-of-3" style="font-weight: bolder;background-color:rgb(255,38,0);border-radius:90px;width:110px; text-align:center;color:white;" variant="base" label="GENERATE BILL" onclick={generateBill}></lightning-button>
+        <lightning-input class="slds-size_1-of-3"  style="font-weight: bolder;" type="text" label="Token : " value={token} readonly>
+        </lightning-input>
+       <br><br>
+        
+        <lightning-input class="slds-size_1-of-3" style="font-weight: bolder;" type="text" label="Table ID: " value={table} readonly>
+        </lightning-input><br>
+    </div>
+    
+
+        <div class="slds-grid slds-wrap">
+        <c-menu-screen style="height: 240px; width:700px; overflow: scroller;"></c-menu-screen>
+        <c-display-today-special-items ></c-display-today-special-items>
+        <c-displayingorderlineitems style="margin-left: 700px;margin-top: 1px;"></c-displayingorderlineitems>
+    </div>
+</div>
+</template>

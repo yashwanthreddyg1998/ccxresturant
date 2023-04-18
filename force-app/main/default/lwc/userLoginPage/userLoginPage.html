@@ -1,0 +1,43 @@
+<template>
+    <div class="card">
+	<lightning-card >
+    
+    <div class="slds-form-element slds-align_absolute-center slds-m-top_medium">
+        <div class="slds-col slds-size_3-of-12 slds-card slds-p-around_medium">
+           <!-- <div class="slds-align_absolute-center slds-m-top_small slds-text-heading_medium">
+                <b><span style="color: rgb(255, 38, 0)">Login Page</span></b>
+            </div>-->
+            <div class="slds-align_absolute-center slds-p-top_xx-large">
+                <img src={LCImage} width="350" height="150"/>
+            </div>
+			<lightning-card >
+                <div class="borderclass">
+            <div class="slds-form-element__control">
+                
+                    <lightning-input label="User Name" name="username" placeholder="User Name" value={Empiduser} onchange={handleUserNameChange}></lightning-input>
+               
+            </div>
+            <div class="slds-form-element__control">
+                
+                    <lightning-input label="Password" type="password" name="password" placeholder="Password" value={Empidpwd} onchange={handlePasswordChange}></lightning-input>
+                
+            </div>
+            <div class="slds-align_absolute-center " style="height:4rem">
+                
+                    <lightning-button variant="brand" label="Login" onclick={handleLogin}></lightning-button>
+               
+                
+            </div>
+            <div>
+                <lightning-input type="checkbox" label="Remember me" checked={rememberMe} onchange={handleRememberMeChange}></lightning-input>
+            </div>
+            <div class="slds-p-around_medium">
+                <lightning-tile label="Forgot Your Password?"></lightning-tile>
+            </div>
+        </div>
+		</lightning-card>
+        </div>
+    </div>
+</lightning-card>
+</div>
+</template>

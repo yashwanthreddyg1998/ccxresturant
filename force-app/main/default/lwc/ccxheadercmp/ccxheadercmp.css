@@ -1,0 +1,59 @@
+.title {
+
+  color: rgb(255, 70, 30);
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+font-style: italic;
+font-weight: bolder;
+
+}
+
+.slds-grid{
+  height: fit-content;
+}
+.slds-p-right_xx-large {
+  text-align: left;
+  padding-right: 15%;
+  }
+  
+  
+  .slds-text-heading_medium {
+   
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .slds-text-body_regular {
+    
+    margin-top: 0;
+    
+    margin-bottom: 0;
+  }
+  
+  .slds-line-height_reset {
+    line-height: 1;
+  }
+  
+  .slds-m-top_small {
+    margin-top: 0.5rem;
+  }
+  h1{
+   
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2.5em;
+    
+     color: rgb(255, 70, 30);
+    
+   }
+   h2 {
+ 
+ 
+     font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+     font-size: 1.5em;
+      font-weight: bolder;
+      color:rgb(255, 70, 30);
+    
+      
+    }

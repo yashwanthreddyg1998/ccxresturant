@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_Should_Be_In_Pascal_Case</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(  CCXR_Name__c )),
+    NOT(REGEX(CCXR_Name__c , &quot;[A-Z][a-z]*|[A-Z][a-z]*&quot;)),
+    NOT(CONTAINS(CCXR_Name__c , &quot; &quot;))
+)</errorConditionFormula>
+    <errorDisplayField>CCXR_Name__c</errorDisplayField>
+    <errorMessage>Name Start With Upper Case Letter</errorMessage>
+</ValidationRule>
