@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Task" icon-name="standard:people">
+        <div class=""  >
+            <div class="slds-m-around_medium" >
+                <lightning-record-form
+                    object-api-name={objectApiName}
+                    fields={Fields}
+                    onsuccess={recordCreated}
+                    columns="2"
+                    >
+                </lightning-record-form>
+            </div>
+        </div>
+    </lightning-card> 
+</template>

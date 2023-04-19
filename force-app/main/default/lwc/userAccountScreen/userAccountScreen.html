@@ -1,0 +1,25 @@
+<template>
+    <Lightning-card title="User Account Creation" if:true={isUserAccountCreationEnabled}>
+           <p class="slds-p-horizontal_small">
+                <lightning-record-form
+                    object-api-name={objectApiName1}
+                    fields={fieldList1}
+                    onsuccess={handleUserAccountCreate}>
+                </lightning-record-form>
+            </p>
+    </Lightning-card> 
+
+   
+    <Lightning-card title="Employee Creation" if:true={isEmployeeCreationEnabled}>
+        <p class="slds-p-horizontal_small">
+             <lightning-record-form
+                 object-api-name={objectApiName2}
+                 fields={fieldList2}
+                 onsuccess={handleEmployeeCreate}
+                 >
+             </lightning-record-form>
+         </p>
+    </Lightning-card> 
+  
+
+</template>

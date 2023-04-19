@@ -3,7 +3,7 @@
     <fullName>CCXR_OrderDiscount__c</fullName>
     <externalId>false</externalId>
     <formula>IF( 
-AND(CCXR_Customer_Table_Status__r.CCXR_Customer__r.CCXR_No_of_Visits__c &gt;1,CCXR_Customer_Table_Status__r.CCXR_Customer__r.CCXR_No_of_Visits__c&lt;=5), 0.05, 
+AND(CCXR_Customer_Table_Status__r.CCXR_Customer__r.CCXR_No_of_Visits__c &gt;=0,CCXR_Customer_Table_Status__r.CCXR_Customer__r.CCXR_No_of_Visits__c&lt;=5), 0.05, 
 IF( CCXR_Customer_Table_Status__r.CCXR_Customer__r.CCXR_No_of_Visits__c &gt;5,0.10,0)
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

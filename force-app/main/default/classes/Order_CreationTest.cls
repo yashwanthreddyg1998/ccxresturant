@@ -70,6 +70,5 @@ private class Order_CreationTest
         insert orderlineitem;
         
         Order_CreationController.createOrderAndOrderLines(cst.id,item.id,2);
-    }        
-    
+    }            
 }

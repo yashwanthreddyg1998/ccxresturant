@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Assigned" icon-name="standard:people">
+        <div class=""  >
+            <div class="slds-m-around_medium" >
+                <lightning-record-form
+                    object-api-name={objectApiName}
+                    fields={Fields}
+                    onsuccess={recordCreated}
+                    mode="edit" 
+                    columns="2"
+                    >
+                </lightning-record-form>
+            </div>
+        </div>
+    </lightning-card>
+</template>

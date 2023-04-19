@@ -10,8 +10,9 @@ import order from '@salesforce/schema/CCXR_Feedback__c.CCXR_Order__c';
 import getfeedback from '@salesforce/apex/feedbackcontroller.feedbackRecMethod';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'; 
 import imageUrl from '@salesforce/resourceUrl/logo';
+import { NavigationMixin } from 'lightning/navigation';
 
-export default class FeedbackForm2 extends LightningElement 
+export default class FeedbackForm2 extends NavigationMixin(LightningElement) 
 {
     @track options1 = [];
     @track options2 = [];
@@ -73,12 +74,10 @@ export default class FeedbackForm2 extends LightningElement
 
     }
 
-    createfeedbackRec() {
-        console.log(this.feedback.CCXR_Food_Quality__c);
-        console.log(this.feedback.CCXR_Service_Quality__c);
-        console.log(this.feedback.CCXR_Order__c);
+    createfeedbackRec() 
+    {
+        
         this.feedback.CCXR_Order__c = this.order;
-        alert( this.feedback.CCXR_Order__c);
         getfeedback({ accRec : this.feedback })
         
         .then(() => {
@@ -94,13 +93,28 @@ export default class FeedbackForm2 extends LightningElement
               this.dispatchEvent(
                   new ShowToastEvent({
                       title: 'Error',
-                      message: 'Error deleting record: ' + error.body.message,
+                      message: 'Error creating feedback: ' + error.body.message,
                       variant: 'error'
                   })
               );
           });
           this.disableButton= true;
-    
 
 
-}}
+          let compDefinition = {
+            componentDef: "c:WelcomePage",
+            
+        };
+     
+        // Base64 encode the compDefinition JS object
+        let encodedCompDef = btoa(JSON.stringify(compDefinition));
+        this[NavigationMixin.Navigate]({
+            type: "standard__webPage",
+            attributes: {
+                url: "/one/one.app#" + encodedCompDef
+            }
+        });
+    }
+
+
+}

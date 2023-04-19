@@ -63,6 +63,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CustomerTableStatusDataTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomerTableStatusTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -143,6 +147,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>OnprojectController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Order_CreationController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -152,6 +160,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Populate_OrderLine_TotalTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ProjectmanagerController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -232,6 +244,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>dddddd</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>displayProjects</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -380,6 +396,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CCXR_Customer_Table_Status__c.Customer_Table_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CCXR_Customer_Table_Status__c.Time_of_reservation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

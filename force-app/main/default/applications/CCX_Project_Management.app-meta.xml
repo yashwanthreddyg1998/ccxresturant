@@ -12,12 +12,16 @@
     <label>CCX Project Management</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
+    <tabs>CCX_On_Project_Screen</tabs>
+    <tabs>CCX_Assigned_Form</tabs>
+    <tabs>CCX_Activity_Screen</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>CCX_Team_Member__c</tabs>
     <tabs>CCX_Team__c</tabs>
     <tabs>CCX_Role__c</tabs>
     <tabs>CCX_Employee__c</tabs>
+    <tabs>User_And_Roles_Screen</tabs>
     <tabs>CCX_Project_Manager__c</tabs>
     <tabs>CCX_Project__c</tabs>
     <tabs>CCX_On_Project__c</tabs>
@@ -27,6 +31,7 @@
     <tabs>CCX_Task__c</tabs>
     <tabs>CCX_Preceding_Task__c</tabs>
     <tabs>CCX_Preceding_Activity__c</tabs>
+    <tabs>ProjectsWizard</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>CCX_Project_Management_UtilityBar</utilityBar>
 </CustomApplication>

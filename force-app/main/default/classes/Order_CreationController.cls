@@ -1,6 +1,5 @@
 public with sharing class Order_CreationController
-{
-    
+{   
     public static Id neworderid;
     @AuraEnabled()
     public static void  createOrderAndOrderLines(id csn,id itemid,integer quantity)
@@ -85,8 +84,7 @@ public with sharing class Order_CreationController
         if(status!=false)
         {
             cts.CCXR_Order_Status__c='Completed';
-            update cts;
-            
+            update cts;        
         }
         return cts;
     }

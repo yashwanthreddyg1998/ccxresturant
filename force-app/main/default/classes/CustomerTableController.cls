@@ -3,7 +3,6 @@
 //Date Modified: 15/03/2023
 //Purpose :list of customer table records in waiting status,
 //This Class contains 5 methods
-
 public with sharing class CustomerTableController
 {
     /*
@@ -40,13 +39,10 @@ public with sharing class CustomerTableController
             acc.Token_Number__c=ran;
             up.add(acc);
         }
-        
-        update up;
+      update up;
         // Update the customer table records
         RETURN up;
-        // Return the updated customer table records
-        
-        
+        // Return the updated customer table records     
     }
     /*
 @AuraEnabled method to update the status of table record, customer is assigned to a table
@@ -67,7 +63,6 @@ public with sharing class CustomerTableController
         update up;
         // Return the updated table records
         RETURN up;
-        
     }
     /*
 @AuraEnabled method to retrieve a list of table records with Vacant or Reserved status
@@ -82,8 +77,7 @@ public with sharing class CustomerTableController
 @AuraEnabled method  retrieve a list of customer table statuses with Occupied
 @return List<CCXR_Customer_Table_Status__c> - list of table records
 */
-    
-    @AuraEnabled
+   @AuraEnabled
     public static List<CCXR_Customer_Table_Status__c> getCustomerTableStatus(){
         List<CCXR_Customer_Table_Status__c> accList =[select Name,Customer_Table_Status__c,Token_Number__c,
                          CCXR_Customer__r.CCXR_Name__c,CCXR_Table__r.Name,CCXR_Customer__r.No_Of_Persons__c from  
@@ -121,6 +115,5 @@ public with sharing class CustomerTableController
         // Return the updated table records
         RETURN up;
         
-    }
-    
+    }   
 }

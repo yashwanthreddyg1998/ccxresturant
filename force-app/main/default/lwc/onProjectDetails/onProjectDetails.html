@@ -1,0 +1,76 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>
+            &nbsp;Bulk On Projects Creation
+        </h3>
+        <template for:each={onProjectList} for:item="onProject" for:index="index">
+            <lightning-record-edit-form key={onProject.id} object-api-name="CCX_On_Project__c" record-id="recordId">
+                <lightning-messages> </lightning-messages>
+                <lightning-layout multiple-rows>
+                    <!--Project-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>Project</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Project__c" variant="label-hidden">
+                        </lightning-input-field>                   
+                    </lightning-layout-item>
+                    <!--Client Partner-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>Client Partner</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Client_Partner__c" variant="label-hidden">
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Start Date-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="ilabeld"><b>Start Date</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Start_Date__c" variant="label-hidden">
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--End Date-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>End Date</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_End_Date__c" variant="label-hidden" >
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Description-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>Description</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Description__c" variant="label-hidden" >
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Is Client?-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>Is Client?</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Is_Client__c" variant="label-hidden" >
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Is Partner?-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <label for="label"><b>Is Partner?</b></label>
+                        <lightning-input-field fieldid="label" field-name="CCX_Is_Partner__c" variant="label-hidden" >
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <!--Buttons:  ADD, DELETE-->
+                    <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="3">
+                        <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:new" access-key={onProject.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon>&nbsp;&nbsp;&nbsp;
+                            <lightning-icon icon-name="action:delete" access-key={onProject.id} id={index}
+                                alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+                            </lightning-icon>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+            </lightning-record-edit-form>
+        </template>
+        <!--Submit/Save Records-->
+        <lightning-layout>
+            <div class="slds-align_absolute-center">
+                <lightning-button variant="success" onclick={handleSubmit} name="submit" label="Submit">
+                </lightning-button>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>

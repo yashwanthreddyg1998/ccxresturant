@@ -1,0 +1,12 @@
+<template>
+    <Lightning-card title="Project Creation">
+        <p class="slds-p-horizontal_small">
+                <lightning-record-form
+                    object-api-name={objectApiName}
+                    fields={fieldList}
+                    onsuccess={handleProjectCreate}
+                    columns="2">
+                </lightning-record-form>
+        </p>
+    </Lightning-card>
+</template>

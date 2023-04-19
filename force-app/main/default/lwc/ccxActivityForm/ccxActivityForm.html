@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Activity" icon-name="standard:people">
+        <div class=""  >
+            <div class="slds-m-around_medium" >
+                <lightning-record-form
+                    object-api-name={objectApiName}
+                    fields={Fields1}
+                    record-id={accountRecordId}
+                    onsuccess={recordCreated}
+                    mode="edit" 
+                    columns="2">
+<!--<lightning-button variant="brand" onclick={handleButton} label="Next" class="slds-p-right_xx-large">
+
+</lightning-button>-->
+           
+                </lightning-record-form>
+                 </div>
+        </div>
+    </lightning-card>
+</template>

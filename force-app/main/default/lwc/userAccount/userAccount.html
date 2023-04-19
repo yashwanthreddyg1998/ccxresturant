@@ -1,0 +1,14 @@
+<template>
+    <!--Creation of New User Account Records -->
+    <lightning-card title="Account creation Using Record Form">
+        <p class="slds-p-horizontal_small">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fieldList}
+                onsuccess={handleUserSAccountCreate}>
+            </lightning-record-form>
+            <lightning-button variant="brand" label="Next" 
+            title="Next" onclick={showEmployeePage}> </lightning-button>
+        </p>
+    </lightning-card> 
+</template>

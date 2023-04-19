@@ -2,8 +2,6 @@
 //Date Creation :16/03/2023
 //Date Modified:19/03/2023
 //Purpose:list of customer table records in occupied status
-
-
 public with sharing class CustomerTableStatusController
 {
     /*
